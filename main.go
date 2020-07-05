@@ -24,6 +24,7 @@ const problemAddr = problemName + ` > div > a`
 type config struct {
 	StoreType string `json:"type"`
 	ID        string `json:"id"`
+	EndPoint  string `json:"endpoint"`
 	PW        string `json:"password"`
 	DB        string `json:"database"`
 }

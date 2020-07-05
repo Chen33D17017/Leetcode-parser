@@ -19,7 +19,7 @@ type dbManager struct {
 }
 
 func newDBManager(configData config) (dbManager, error) {
-	dsn := fmt.Sprintf("%s:%s@tcp(127.0.0.1:3306)/%s", configData.ID, configData.PW, configData.DB)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s", configData.ID, configData.PW, configData.EndPoint, configData.DB)
 	db, err := sql.Open(configData.StoreType, dsn)
 	if err != nil {
 		return dbManager{}, err
